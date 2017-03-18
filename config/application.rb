@@ -37,5 +37,7 @@ module Kontakliste
     config.time_zone = 'Brasilia'
     config.i18n.locale = 'en'
     I18n.default_locale = 'en'
+
+    config.autoload_paths += %W(lib/ldap)
   end
 end
