@@ -1,3 +1,4 @@
+# Describes contacts requests handle
 class ContactsController < ApplicationController
   def index
     @search = Contact.search(params[:q])

@@ -1,3 +1,4 @@
+# Describes all mailer default handlers
 class ApplicationMailer < ActionMailer::Base
   default from: 'from@example.com'
   layout 'mailer'

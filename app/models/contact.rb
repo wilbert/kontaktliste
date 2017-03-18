@@ -1,3 +1,4 @@
+# Describe contact model definition
 class Contact < ApplicationRecord
   belongs_to :manager, class_name: 'Contact', required: false
 
