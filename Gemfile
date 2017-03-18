@@ -4,6 +4,7 @@ gem 'rails',                                '~> 5.0.2'
 gem 'pg',                                   '~> 0.18'
 gem 'puma',                                 '~> 3.0'
 gem 'net-ldap',                             '0.16.0'
+gem 'ransack',                              '1.8.2'
 
 group :development, :test do
   gem 'pry',                                '0.10.4'
