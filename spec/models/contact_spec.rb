@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Contact, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let!(:parent) { create(:contact) }
+  let!(:child) { create(:contact, manager: parent) }
+
+  it { expect(Contact.orphans).to_not include(child) }
 end
