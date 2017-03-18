@@ -1,4 +1,5 @@
 module Ldap
+  # This class translates Ldap Entry to a Ruby ActiveModel method
   class Person
     include ActiveModel::Model
     include ActiveModel::Serialization
@@ -16,52 +17,58 @@ module Ldap
       save_photo_file
     end
 
-    def self.first
-      all.first
-    end
-
-    def self.all
-      treebase = "ou=people,dc=ecorp,dc=org"
-      filter = Net::LDAP::Filter.eq('objectclass', 'inetOrgPerson')
-
-      people = []
-
-      Person.connection.search(base: treebase, filter: filter).each do |entry|
-        person = Person.parse(entry)
-        people.push(person)
-      end
-
-      return people
-    end
-
     def avatar
       File.open(tmp_photo_path)
     end
 
-    private
+    class << self
+      def first
+        Person.all.first
+      end
 
-    def self.parse(entry)
-      manager_entry = Person.connection.search(base: entry.first('manager')) if entry.first('manager')
-      manager = parse(manager_entry.first) if manager_entry
+      def all
+        treebase = 'ou=people,dc=ecorp,dc=org'
+        filter = Net::LDAP::Filter.eq('objectclass', 'inetOrgPerson')
 
-      person = Ldap::Person.new(
-        dn: entry.first('dn'),
-        uid: entry.first('uid'),
-        inetOrgPerson: entry.first('inetOrgPerson'),
-        cn: entry.first('cn'),
-        sn: entry.first('sn'),
-        givenname: entry.first('givenname'),
-        mail: entry.first('mail'),
-        telephonenumber: entry.first('telephonenumber'),
-        mobile: entry.first('mobile'),
-        postaladdress: entry.first('postaladdress'),
-        postalcode: entry.first('postalcode'),
-        l: entry.first('l'),
-        c: entry.first('c'),
-        jpegphoto: entry.first('jpegphoto'),
-        manager: manager
-      )
+        people = []
+
+        Person.connection.search(base: treebase, filter: filter).each do |entry|
+          person = Person.parse(entry)
+          people.push(person)
+        end
+
+        people
+      end
+
+      def parse(entry)
+        manager_entry = Person.connection.search(base: entry.first('manager')) if entry.first('manager')
+        manager = parse(manager_entry.first) if manager_entry
+
+        Ldap::Person.new(
+          dn: entry.first('dn'),
+          uid: entry.first('uid'),
+          inetOrgPerson: entry.first('inetOrgPerson'),
+          cn: entry.first('cn'),
+          sn: entry.first('sn'),
+          givenname: entry.first('givenname'),
+          mail: entry.first('mail'),
+          telephonenumber: entry.first('telephonenumber'),
+          mobile: entry.first('mobile'),
+          postaladdress: entry.first('postaladdress'),
+          postalcode: entry.first('postalcode'),
+          l: entry.first('l'),
+          c: entry.first('c'),
+          jpegphoto: entry.first('jpegphoto'),
+          manager: manager
+        )
+      end
+
+      def connection
+        Net::LDAP.new host: '0.0.0.0', port: 389, auth: { method: :simple, username: 'cn=admin,dc=ecorp,dc=org', password: 'supersecret' }
+      end
     end
+
+    private
 
     def save_photo_file
       file = File.open(tmp_photo_path, 'wb')
@@ -71,10 +78,6 @@ module Ldap
 
     def tmp_photo_path
       "/tmp/kontakliste_#{uid}.jpeg"
-    end
-
-    def self.connection
-      Net::LDAP.new host: '0.0.0.0', port: 389, auth: { method: :simple, username: "cn=admin,dc=ecorp,dc=org", password: "supersecret" }
     end
   end
 end

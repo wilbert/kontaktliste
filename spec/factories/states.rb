@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :state do
-    acronym "MyString"
+    acronym 'MyString'
   end
 end

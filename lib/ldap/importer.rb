@@ -1,17 +1,12 @@
 require 'ldap/person'
 
 module Ldap
+  # Importer allows import Ldap directory into a system database
   class Importer
     def self.import!
       people = Ldap::Person.all
-
-      puts 'Starting importing'
-
       people.each do |person|
-        puts "Importing #{person.uid}"
-        puts "Dn: #{person.dn}"
-        puts "Manager: #{person.manager}"
-
+        Rails.logger.info "Importing #{person.uid}"
         contact = Contact.find_or_create_by(uid: person.uid)
         contact.dn = person.dn
         contact.name = person.name
@@ -27,7 +22,5 @@ module Ldap
         contact.save!
       end
     end
-
-    puts 'Finishing importing'
   end
 end

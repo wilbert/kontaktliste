@@ -38,6 +38,6 @@ module Kontakliste
     config.i18n.locale = 'en'
     I18n.default_locale = 'en'
 
-    config.autoload_paths += %W(lib/ldap)
+    config.autoload_paths += %w(lib/ldap)
   end
 end
