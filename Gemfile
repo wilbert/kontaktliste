@@ -1,23 +1,23 @@
 source 'https://rubygems.org'
 
-gem 'rails',                    '~> 5.0.2'
-gem 'pg',                       '~> 0.18'
-gem 'puma',                     '~> 3.0'
-gem 'net-ldap',                 '0.16.0'
+gem 'rails',                                '~> 5.0.2'
+gem 'pg',                                   '~> 0.18'
+gem 'puma',                                 '~> 3.0'
+gem 'net-ldap',                             '0.16.0'
 
 group :development, :test do
-  gem 'pry'
-  gem 'pry-nav'
-  gem 'factory_girl_rails'
-  gem 'pry-rescue'
-  gem 'brakeman'
-  gem 'rubocop'
+  gem 'pry',                                '0.10.4'
+  gem 'pry-nav',                            '0.2.4'
+  gem 'factory_girl_rails',                 '4.8.0'
+  gem 'pry-rescue',                         '1.4.5'
+  gem 'brakeman',                           '3.5.0'
+  gem 'rubocop',                            '0.47.1'
 end
 
 group :development do
-  gem 'listen',                 '~> 3.0.5'
-  gem 'spring',                 '2.0.1'
-  gem 'spring-watcher-listen',  '~> 2.0.0'
+  gem 'listen',                             '~> 3.0.5'
+  gem 'spring',                             '2.0.1'
+  gem 'spring-watcher-listen',              '~> 2.0.0'
 end
 
 group :test do

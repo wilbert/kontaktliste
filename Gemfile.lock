@@ -184,20 +184,20 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  brakeman
+  brakeman (= 3.5.0)
   database_cleaner (= 1.5.3)
-  factory_girl_rails
+  factory_girl_rails (= 4.8.0)
   launchy (= 2.4.3)
   listen (~> 3.0.5)
   net-ldap (= 0.16.0)
   pg (~> 0.18)
-  pry
-  pry-nav
-  pry-rescue
+  pry (= 0.10.4)
+  pry-nav (= 0.2.4)
+  pry-rescue (= 1.4.5)
   puma (~> 3.0)
   rails (~> 5.0.2)
   rspec-rails (~> 3.5)
-  rubocop
+  rubocop (= 0.47.1)
   shoulda-matchers (= 2.8.0)
   simplecov (= 0.9.1)
   spring (= 2.0.1)
