@@ -6,6 +6,7 @@ gem 'puma',                                 '~> 3.0'
 gem 'rails',                                '~> 5.0.2'
 gem 'ransack',                              '1.8.2'
 gem 'paperclip',                            '5.1.0'
+gem 'jbuilder',                             '2.6.3'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'
