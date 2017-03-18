@@ -27,4 +27,5 @@ group :test do
   gem 'vcr',                                '2.9.3'
   gem 'shoulda-matchers',                   '2.8.0'
   gem 'simplecov',                          '0.9.1'
+  gem 'rails-controller-testing',           '1.0.1'
 end
