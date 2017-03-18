@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170318173928) do
+ActiveRecord::Schema.define(version: 20170318183235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,10 @@ ActiveRecord::Schema.define(version: 20170318173928) do
     t.string   "uid"
     t.integer  "zipcode"
     t.string   "postal_address"
+    t.integer  "city_id"
+    t.string   "dn"
+    t.index ["city_id"], name: "index_contacts_on_city_id", using: :btree
+    t.index ["dn"], name: "index_contacts_on_dn", using: :btree
     t.index ["uid"], name: "index_contacts_on_uid", using: :btree
     t.index ["zipcode"], name: "index_contacts_on_zipcode", using: :btree
   end
@@ -51,4 +55,5 @@ ActiveRecord::Schema.define(version: 20170318173928) do
   end
 
   add_foreign_key "cities", "states"
+  add_foreign_key "contacts", "cities"
 end
