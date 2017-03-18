@@ -18,5 +18,6 @@ describe 'Contacts' do
     it { expect(@json['contacts'].size).to eq(1) }
     it { expect(@json['contacts'][0]['name']).to eq('Mia Bradely') }
     it { expect(@json['contacts'][0]['avatar']).to match(/avatar\.png/) }
+    it { expect(@json['contacts'][0]['children']).to_not be_empty }
   end
 end

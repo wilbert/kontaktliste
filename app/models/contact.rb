@@ -1,6 +1,9 @@
 # Describe contact model definition
 class Contact < ApplicationRecord
   belongs_to :manager, class_name: 'Contact', required: false
+  belongs_to :city
+
+  has_many :children, class_name: 'Contact', foreign_key: :manager_id
 
   enum gender: [:male, :female]
 
