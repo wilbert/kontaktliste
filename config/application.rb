@@ -40,9 +40,21 @@ module Kontakliste
 
     config.autoload_paths += %w(lib/ldap)
 
-    config.action_dispatch.default_headers = {
-      'Access-Control-Allow-Origin' => '*',
-      'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
-    }
+    # config.action_dispatch.default_headers = {
+    #   'Access-Control-Allow-Origin' => '*',
+    #   'Access-Control-Request-Method' => %w{GET POST PATCH DELETE OPTIONS}.join(",")
+    # }
+
+    config.middleware.insert_before 0, 'Rack::Cors', logger: (-> { Rails.logger }) do
+      allow do
+        # origins 'localhost:3000'
+        origins '*'
+
+        resource '*',
+          headers: :any,
+          methods: [:get, :post, :delete, :put, :patch, :options, :head],
+          max_age: 0
+      end
+    end
   end
 end

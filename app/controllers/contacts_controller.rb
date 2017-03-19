@@ -13,4 +13,19 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
     render json: @contact
   end
+
+  def update
+    @contact = Contact.find(params[:id])
+
+    if @contact.update(contact_params)
+      head :no_content
+    else
+      render json: @contact.errors, status: :unprocessable_entity
+    end
+  end
+
+  private
+  def contact_params
+    params.require(:contact).permit(:manager_id)
+  end
 end
