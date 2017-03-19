@@ -5,8 +5,11 @@ class ContactSerializer < ActiveModel::Serializer
 
   attributes :id, :name, :email, :phone, :mobile, :manager_id, :gender
   attributes :postal_address, :zipcode_city, :country, :avatar
+  attributes :children
 
-  has_many :children
+  def children
+    self.object.children.map(&:id)
+  end
 
   def zipcode_city
     "#{self.object.zipcode} #{self.object.city.name}"
