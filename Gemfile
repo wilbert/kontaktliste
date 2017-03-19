@@ -7,6 +7,7 @@ gem 'pg',                                   '~> 0.18'
 gem 'puma',                                 '~> 3.0'
 gem 'rails',                                '~> 5.0.2'
 gem 'ransack',                              '1.8.2'
+gem 'active_model_serializers',             '0.10.5'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'
