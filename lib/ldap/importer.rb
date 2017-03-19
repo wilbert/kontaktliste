@@ -1,7 +1,7 @@
 require 'ldap/person'
 
 module Ldap
-  # Importer allows import Ldap directory into a system database
+  # Importer will import Ldap directory into a system database
   class Importer
     def self.import!
       people = Ldap::Person.all
