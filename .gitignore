@@ -14,6 +14,7 @@
 !/tmp/.keep
 coverage/*
 public/system/*
+public/images/*
 
 # Ignore Byebug command history file.
 .byebug_history
