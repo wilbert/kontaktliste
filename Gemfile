@@ -8,7 +8,8 @@ gem 'puma',                                 '~> 3.0'
 gem 'rails',                                '~> 5.0.2'
 gem 'ransack',                              '1.8.2'
 gem 'active_model_serializers',             '0.10.5'
-gem 'rack-cors',                            :require => 'rack/cors'
+gem 'rack-cors',                            '0.4.1', require: 'rack/cors'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'
