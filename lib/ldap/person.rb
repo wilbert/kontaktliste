@@ -77,7 +77,7 @@ module Ldap
     end
 
     def tmp_photo_path
-      "/tmp/kontakliste_#{uid}.jpeg"
+      "/tmp/kontaktliste_#{uid}.jpeg"
     end
   end
 end

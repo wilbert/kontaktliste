@@ -16,7 +16,7 @@ require 'rails/test_unit/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Kontakliste
+module Kontaktliste
   # Define all application default settings
   class Application < Rails::Application
     config.generators do |g|

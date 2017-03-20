@@ -6,15 +6,15 @@ default: &default
 
 development:
   <<: *default
-  database: kontakliste_development
+  database: kontaktliste_development
 
 test:
   <<: *default
-  database: kontakliste_test
+  database: kontaktliste_test
 
 production:
   <<: *default
-  database: kontakliste_production
-  username: kontakliste
+  database: kontaktliste_production
+  username: kontaktliste
   password: <%= ENV['KONTAKLISTE_DATABASE_PASSWORD'] %>
   password: 6ee657ad70e9b512a
