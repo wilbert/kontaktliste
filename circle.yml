@@ -1,0 +1,52 @@
+machine:
+  timezone: America/Sao_Paulo
+
+dependencies:
+  pre:
+    - gem install bundler --pre:
+        parallel: true
+    - gem install dpl:
+        parallel: true
+    - sudo apt-get update:
+        parallel: true
+    - sudo apt-get autoremove:
+        parallel: true
+    - sudo apt-get install apt -y:
+        parallel: true
+
+checkout:
+  post:
+    - mkdir -p tmp/cache
+
+database:
+  override:
+    - 'cp config/database.yml.example config/database.yml'
+    - 'bundle exec rake db:drop db:create db:migrate RAILS_ENV=test || true'
+
+test:
+  pre:
+    - bundle exec rubocop --rails:
+        parallel: true
+    - bundle exec brakeman --exit-on-warn --except ForgerySetting:
+        parallel: true
+  override:
+    - coverage=on bundle exec rspec spec --format progress --color:
+        parallel: true
+        timeout: 1000
+
+general:
+  artifacts:
+    - coverage
+    - tmp/kontrast
+    - tmp/shots
+
+deployment:
+  staging:
+    branch: development
+    commands:
+      - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_ESPN_WATCH_STAGING_ID --wait-until-deployed --skip_cleanup
+
+  production:
+    branch: master
+    commands:
+      - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_ESPN_WATCH_PRODUCTION_ID --wait-until-deployed --skip_cleanup
