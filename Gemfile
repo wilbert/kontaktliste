@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.4'
+
 gem 'jbuilder',                             '2.6.3'
 gem 'net-ldap',                             '0.16.0'
 gem 'paperclip',                            '5.1.0'
