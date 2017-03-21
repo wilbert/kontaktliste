@@ -9,7 +9,7 @@ gem 'rails',                                '~> 5.0.2'
 gem 'ransack',                              '1.8.2'
 gem 'active_model_serializers',             '0.10.5'
 gem 'rack-cors',                            '0.4.1', require: 'rack/cors'
-gem 'aws-sdk'
+gem 'aws-sdk',                              '2.8.7'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'
@@ -18,6 +18,7 @@ group :development, :test do
   gem 'pry-nav',                            '0.2.4'
   gem 'pry-rescue',                         '1.4.5'
   gem 'rubocop',                            '0.47.1'
+  gem 'dotenv-rails',                       '2.2.0'
 end
 
 group :development do

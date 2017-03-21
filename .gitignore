@@ -16,6 +16,7 @@ coverage/*
 public/system/*
 public/images/*
 config/database.yml
+.env
 
 # Ignore Byebug command history file.
 .byebug_history

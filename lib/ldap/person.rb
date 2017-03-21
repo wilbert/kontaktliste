@@ -64,7 +64,7 @@ module Ldap
       end
 
       def connection
-        Net::LDAP.new host: '0.0.0.0', port: 389, auth: { method: :simple, username: 'cn=admin,dc=ecorp,dc=org', password: 'supersecret' }
+        Net::LDAP.new host: Rails.application.secrets.ldap_server, port: Rails.application.secrets.ldap_server_port, auth: { method: :simple, username: Rails.application.secrets.ldap_server_username, password: Rails.application.secrets.ldap_server_password }
       end
     end
 
