@@ -1,5 +1,4 @@
-# Describes contacts requests handle
-class ContactsController < ApplicationController
+class Api::V1::ContactsController < ApplicationController
   def index
     params[:q] ||= {}
     @search = Contact.search(params[:q])

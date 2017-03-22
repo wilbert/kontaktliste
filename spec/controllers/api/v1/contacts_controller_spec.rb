@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe ContactsController, type: :controller do
+RSpec.describe Api::V1::ContactsController, type: :controller do
   let!(:contact1) { create(:contact, name: 'Mia Bradley') }
   let!(:contact2) { create(:contact, name: 'Marvin Hanson') }
 
