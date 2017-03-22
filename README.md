@@ -34,6 +34,14 @@ If everything goes OK, you can now run the project!
 1. `$ bundle exec rails server` - Opens the server
 2. Open [http://localhost:3000](http://localhost:3000)
 
+#### Running automated Tasks
+
+`$ bundle exec rake ldap:import` to import LDAP data into app database.
+
+#### Setup tasks in CRON
+
+`$ bundle exec whenever --set 'environment=#{railsenv}' --update-crontab` to setup automated tasks in your crontab file based on rules available in `config/schedule.rb`.
+
 #### Running specs and checking coverage
 
 `$ bundle exec rake spec` to run the specs and to generate the coverage report then open the file `coverage/index.html` on your browser.
