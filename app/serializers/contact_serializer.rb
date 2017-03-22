@@ -21,6 +21,6 @@ class ContactSerializer < ActiveModel::Serializer
   end
 
   def avatar
-    "//#{Rails.application.secrets.domain_name}#{object.avatar.url(:thumb)}"
+    object.avatar.url(:thumb)
   end
 end
