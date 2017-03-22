@@ -16,13 +16,26 @@ RSpec.describe Ldap::Person, :vcr do
 
   describe 'contacts callbacks' do
     describe '#after_save' do
-      it 'should update manager when contact is saved' do
-        person4 = Ldap::Person.search(child.dn)
-        person4.update_manager(parent.dn)
-        child.manager = other_parent
-        child.save!
-        expect(Ldap::Person.search(child.dn).manager.dn).to eq('uid=1,ou=People,dc=ecorp,dc=org')
-        person4.update_manager(parent.dn)
+      describe 'with an existent manager' do
+        it 'should update manager when contact is saved' do
+          person4 = Ldap::Person.search(child.dn)
+          person4.update_manager(parent.dn)
+          child.manager = other_parent
+          child.save!
+          person4 = Ldap::Person.search(child.dn)
+          expect(person4.manager.dn).to eq(other_parent.dn)
+        end
+      end
+
+      describe 'with an unexistent manager' do
+        it 'should update manager when contact is saved' do
+          person4 = Ldap::Person.search(child.dn)
+          person4.update_manager(parent.dn)
+          child.manager = nil
+          child.save!
+          person4 = Ldap::Person.search(child.dn)
+          expect(person4.manager).to eq(nil)
+        end
       end
     end
   end
