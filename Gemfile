@@ -13,7 +13,7 @@ gem 'active_model_serializers',             '0.10.5'
 gem 'rack-cors',                            '0.4.1', require: 'rack/cors'
 gem 'aws-sdk',                              '2.8.7'
 gem 'whenever',                             '0.9.4', require: false
-gem 'dotenv-rails',                       '2.2.0'
+gem 'dotenv-rails',                         '2.2.0'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'
