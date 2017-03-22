@@ -1,3 +1,4 @@
+# Define Contact JSON payload in API.
 class ContactSerializer < ActiveModel::Serializer
   include ActionView::Helpers::AssetUrlHelper
 
@@ -8,18 +9,18 @@ class ContactSerializer < ActiveModel::Serializer
   attributes :children
 
   def children
-    self.object.children.map(&:id)
+    object.children.map(&:id)
   end
 
   def zipcode_city
-    "#{self.object.zipcode} #{self.object.city.name}"
+    "#{object.zipcode} #{object.city.name}"
   end
 
   def country
-    self.object.city.state.acronym
+    object.city.state.acronym
   end
 
   def avatar
-    "//#{Rails.application.secrets.domain_name}#{self.object.avatar.url(:thumb)}"
+    "//#{Rails.application.secrets.domain_name}#{object.avatar.url(:thumb)}"
   end
 end

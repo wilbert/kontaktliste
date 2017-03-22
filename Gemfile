@@ -2,18 +2,18 @@ source 'https://rubygems.org'
 
 ruby '2.2.4'
 
+gem 'active_model_serializers',             '0.10.5'
+gem 'aws-sdk',                              '2.8.7'
+gem 'dotenv-rails',                         '2.2.0'
 gem 'jbuilder',                             '2.6.3'
 gem 'net-ldap',                             '0.16.0'
 gem 'paperclip',                            '5.1.0'
 gem 'pg',                                   '~> 0.18'
 gem 'puma',                                 '~> 3.0'
+gem 'rack-cors',                            '0.4.1', require: 'rack/cors'
 gem 'rails',                                '~> 5.0.2'
 gem 'ransack',                              '1.8.2'
-gem 'active_model_serializers',             '0.10.5'
-gem 'rack-cors',                            '0.4.1', require: 'rack/cors'
-gem 'aws-sdk',                              '2.8.7'
 gem 'whenever',                             '0.9.4', require: false
-gem 'dotenv-rails',                         '2.2.0'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'

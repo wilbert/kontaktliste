@@ -19,9 +19,9 @@ class Contact < ApplicationRecord
   private
 
   def update_manager
-    if manager_id_changed?
-      person = Ldap::Person.search(dn)
-      person.update_manager(manager.dn)
-    end
+    return nil if manager_id_changed?
+
+    person = Ldap::Person.search(dn)
+    person.update_manager(manager.dn)
   end
 end

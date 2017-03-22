@@ -8,6 +8,7 @@ AllCops:
     - 'db/schema.rb'
     - 'vendor/bundle/**/*'
     - 'spec/factories/**/*'
+    - 'config/environments/*'
 
 Metrics/ClassLength:
   Max: 150
@@ -18,5 +19,8 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Max: 30
 
-Metrics/AbcSize:
+Metrics/BlockLength:
   Max: 30
+
+Metrics/AbcSize:
+  Max: 35

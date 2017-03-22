@@ -81,8 +81,8 @@ Rails.application.configure do
     storage: :s3,
     region: Rails.application.secrets.s3_region,
     bucket: Rails.application.secrets.s3_bucket_name,
-    url: ":rails_env/images/:class/:attachment/:id/:style/:filename",
-    path: ":rails_env/images/:class/:attachment/:id/:style/:filename",
+    url: ':rails_env/images/:class/:attachment/:id/:style/:filename',
+    path: ':rails_env/images/:class/:attachment/:id/:style/:filename',
     credentials: {
       access_key_id: Rails.application.secrets.aws_access_key_id,
       secret_access_key: Rails.application.secrets.aws_access_key_secret

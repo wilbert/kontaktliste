@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   root 'api/v1/contacts#index'
 
-  get '/healthcheck', to: -> _env { [200, { 'Content-Type' => 'text/plain' }, %w(ok)] }
+  get '/healthcheck', to: ->(_env) { [200, { 'Content-Type' => 'text/plain' }, %w(ok)] }
 end
