@@ -10,6 +10,8 @@ module Ldap
         contact = Contact.find_or_create_by(uid: person.uid)
         contact.dn = person.dn
         contact.name = person.name
+        contact.first_name = person.first_name
+        contact.surname = person.surname
         contact.email = person.email
         contact.phone = person.phone
         contact.mobile = person.mobile

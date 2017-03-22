@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::ContactsController, type: :controller do
-  let!(:contact1) { create(:contact, name: 'Mia Bradley') }
-  let!(:contact2) { create(:contact, name: 'Marvin Hanson') }
+  let!(:contact1) { create(:contact, name: 'Mia Bradley', first_name: 'Mia', surname: 'Bradley') }
+  let!(:contact2) { create(:contact, name: 'Marvin Hanson', first_name: 'Marvin', surname: 'Hanson') }
 
   describe 'GET #index' do
     before { get :index }
@@ -29,7 +29,7 @@ RSpec.describe Api::V1::ContactsController, type: :controller do
     end
 
     describe 'with invalid attributes' do
-      let(:invalid_attributes) { { name: nil } }
+      let(:invalid_attributes) { { first_name: nil } }
 
       before { allow_any_instance_of(Contact).to receive(:update).and_return(false) }
 

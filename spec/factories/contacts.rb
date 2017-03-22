@@ -1,5 +1,7 @@
 FactoryGirl.define do
   factory :contact do
+    first_name 'Mia'
+    surname 'Bradley'
     name 'Mia Bradley'
     email 'mbradley@ecorp.org'
     phone '(389)-540-3920'

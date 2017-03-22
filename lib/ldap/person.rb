@@ -8,7 +8,9 @@ module Ldap
     attr_accessor :mail, :telephonenumber, :mobile, :postaladdress
     attr_accessor :postalcode, :l, :c, :jpegphoto, :manager
 
-    alias_attribute :name, :givenname
+    alias_attribute :first_name, :givenname
+    alias_attribute :surname, :sn
+    alias_attribute :name, :cn
     alias_attribute :email, :mail
     alias_attribute :phone, :telephonenumber
 
