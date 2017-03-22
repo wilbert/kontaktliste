@@ -44,9 +44,9 @@ deployment:
   staging:
     branch: development
     commands:
-      - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_ESPN_WATCH_STAGING_ID --wait-until-deployed --skip_cleanup
+      - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_KONTAKTLISTE_OPSWORKS_STAGING_ID --wait-until-deployed --skip_cleanup
 
   production:
     branch: master
     commands:
-      - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_ESPN_WATCH_PRODUCTION_ID --wait-until-deployed --skip_cleanup
+      - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_KONTAKTLISTE_OPSWORKS_PRODUCTION_ID --wait-until-deployed --skip_cleanup
