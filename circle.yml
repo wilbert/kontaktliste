@@ -30,7 +30,7 @@ test:
     - bundle exec brakeman --exit-on-warn --except ForgerySetting:
         parallel: true
   override:
-    - coverage=on bundle exec rspec spec --format progress --color:
+    - coverage=on bundle exec rspec spec --format progress --color --exclude-pattern 'spec/lib/*.rb':
         parallel: true
         timeout: 1000
 
