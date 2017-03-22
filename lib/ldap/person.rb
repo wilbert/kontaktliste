@@ -21,6 +21,10 @@ module Ldap
       File.open(tmp_photo_path)
     end
 
+    def update_manager(new_manager)
+      Person.connection.replace_attribute dn, :manager, new_manager
+    end
+
     class << self
       def first
         Person.all.first
@@ -38,6 +42,14 @@ module Ldap
         end
 
         people
+      end
+
+      def search(dn)
+        Person.connection.search(base: dn).each do |entry|
+          return Person.parse(entry)
+        end
+
+        nil
       end
 
       def parse(entry)
