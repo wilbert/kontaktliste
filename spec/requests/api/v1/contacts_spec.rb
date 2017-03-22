@@ -30,9 +30,9 @@ describe 'Contacts' do
     end
 
     it { expect(response.status).to be(200) }
-    it { expect(@json['name']).to eq('Mia Bradely') }
-    it { expect(@json['avatar']).to match(/avatar\.png/) }
-    it { expect(@json['zipcode_city']).to_not be_nil }
-    it { expect(@json['children']).to_not be_empty }
+    it { expect(@json['contact']['name']).to eq('Mia Bradely') }
+    it { expect(@json['contact']['avatar']).to match(/avatar\.png/) }
+    it { expect(@json['contact']['zipcode_city']).to_not be_nil }
+    it { expect(@json['contact']['children']).to_not be_empty }
   end
 end

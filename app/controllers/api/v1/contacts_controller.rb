@@ -25,6 +25,6 @@ class Api::V1::ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:contact).permit(:manager_id)
+    params.require(:contact).permit(:manager_id, :name)
   end
 end
