@@ -44,6 +44,7 @@ module Kontaktliste
     config.autoload_paths += %w(app/services)
 
     config.active_job.queue_adapter = :shoryuken
+    config.active_job.queue_name_prefix = Rails.env
 
     config.middleware.insert_before 0, 'Rack::Cors', logger: (-> { Rails.logger }) do
       allow do

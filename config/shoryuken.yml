@@ -1,0 +1,4 @@
+concurrency: 25
+delay: 25
+queues:
+  - [face_analyzer, 6]
