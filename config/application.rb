@@ -43,10 +43,7 @@ module Kontaktliste
     config.autoload_paths += %w(lib/ldap)
     config.autoload_paths += %w(app/services)
 
-    # config.action_dispatch.default_headers = {
-    #   'Access-Control-Allow-Origin' => '*',
-    #   'Access-Control-Request-Method' => %w{GET POST PATCH DELETE OPTIONS}.join(",")
-    # }
+    config.active_job.queue_adapter = :shoryuken
 
     config.middleware.insert_before 0, 'Rack::Cors', logger: (-> { Rails.logger }) do
       allow do

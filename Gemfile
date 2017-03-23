@@ -16,6 +16,7 @@ gem 'ransack',                              '1.8.2'
 gem 'whenever',                             '0.9.4', require: false
 # gem 'kairos-api',                           '0.0.2'
 gem 'kairos-api',                           path: '../kairos-api'
+gem 'shoryuken',                            '3.0.3'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'

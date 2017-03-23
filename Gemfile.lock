@@ -213,6 +213,10 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
+    shoryuken (3.0.3)
+      aws-sdk-core (~> 2)
+      concurrent-ruby
+      thor
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
     simplecov (0.9.1)
@@ -273,6 +277,7 @@ DEPENDENCIES
   ransack (= 1.8.2)
   rspec-rails (~> 3.5)
   rubocop (= 0.47.1)
+  shoryuken (= 3.0.3)
   shoulda-matchers (= 2.8.0)
   simplecov (= 0.9.1)
   spring (= 2.0.1)
