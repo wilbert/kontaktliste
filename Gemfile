@@ -17,6 +17,8 @@ gem 'whenever',                             '0.9.4', require: false
 gem 'kairos-api',                           git: 'https://github.com/wilbert/kairos-api.git'
 gem 'shoryuken',                            '3.0.3'
 gem 'apipie-rails',                         '0.4.0'
+gem 'dalli',                                '2.7.4'
+gem 'actionpack-action_caching',            '1.2.0'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'
