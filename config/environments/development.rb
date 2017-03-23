@@ -44,7 +44,14 @@ Rails.application.configure do
   config.action_controller.asset_host = Rails.application.secrets.domain_name
 
   config.paperclip_defaults = {
-    path: "#{Rails.root}/public/images/:class/:attachment/:id/:style/:filename",
-    url: "//#{Rails.application.secrets.domain_name}/images/:class/:attachment/:id/:style/:filename"
+    storage: :s3,
+    s3_region: Rails.application.secrets.aws_s3_region,
+    bucket: Rails.application.secrets.aws_s3_bucket_name,
+    url: ':rails_env/images/:class/:attachment/:id/:style/:filename',
+    path: ':rails_env/images/:class/:attachment/:id/:style/:filename',
+    credentials: {
+      access_key_id: Rails.application.secrets.aws_access_key_id,
+      secret_access_key: Rails.application.secrets.aws_access_key_secret
+    }
   }
 end
