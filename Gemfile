@@ -2,10 +2,14 @@ source 'https://rubygems.org'
 
 ruby '2.2.4'
 
+gem 'actionpack-action_caching',            '1.2.0'
 gem 'active_model_serializers',             '0.10.5'
+gem 'apipie-rails',                         '0.4.0'
 gem 'aws-sdk',                              '2.8.7'
+gem 'dalli',                                '2.7.4'
 gem 'dotenv-rails',                         '2.2.0'
 gem 'jbuilder',                             '2.6.3'
+gem 'kairos-api',                           git: 'https://github.com/wilbert/kairos-api.git'
 gem 'net-ldap',                             '0.16.0'
 gem 'paperclip',                            '5.1.0'
 gem 'pg',                                   '~> 0.18'
@@ -13,12 +17,8 @@ gem 'puma',                                 '~> 3.0'
 gem 'rack-cors',                            '0.4.1', require: 'rack/cors'
 gem 'rails',                                '~> 5.0.2'
 gem 'ransack',                              '1.8.2'
-gem 'whenever',                             '0.9.4', require: false
-gem 'kairos-api',                           git: 'https://github.com/wilbert/kairos-api.git'
 gem 'shoryuken',                            '3.0.3'
-gem 'apipie-rails',                         '0.4.0'
-gem 'dalli',                                '2.7.4'
-gem 'actionpack-action_caching',            '1.2.0'
+gem 'whenever',                             '0.9.4', require: false
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'

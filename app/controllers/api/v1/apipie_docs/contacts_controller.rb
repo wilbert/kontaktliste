@@ -1,6 +1,7 @@
 module Api
   module V1
     module ApipieDocs
+      # Decribe API::V1::Contacts resource api docs.
       module ContactsController
         def apipie_index
           api :GET, '/v1/contacts', 'List all available contacts'

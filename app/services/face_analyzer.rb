@@ -1,5 +1,7 @@
 require 'kairos'
 
+# FaceAnalyzer is a service that uses Kairos API to fetch face data.
+# The most relevant data is eye position and gender for now.
 class FaceAnalyzer
   def initialize(url)
     @url = url

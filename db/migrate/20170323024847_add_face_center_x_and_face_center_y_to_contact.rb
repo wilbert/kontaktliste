@@ -1,3 +1,4 @@
+# Add face center X and Y fields to contacts table.
 class AddFaceCenterXAndFaceCenterYToContact < ActiveRecord::Migration[5.0]
   def change
     add_column :contacts, :face_center_x, :integer

@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kairos.com/detect
+    body:
+      encoding: UTF-8
+      string: '{"url":"/system/contacts/avatars/000/000/015/original/kontaktliste_29.jpeg?1490313324","selector":"FULL"}'
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/json
+      app_id:
+      - 5ccbf54c
+      app_key:
+      - db71ee25756b56483dc80197795e3a23
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,app_key,app_id,api_key
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      api-canonical:
+      - 58d4606e281600056595
+      content-type:
+      - text/html
+      date:
+      - Thu, 23 Mar 2017 23:55:26 GMT
+      server:
+      - nginx/1.10.0 (Ubuntu)
+      content-length:
+      - '107'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Errors":[{"ErrCode":5000,"Message":"an invalid image was sent must
+        be jpg or png format"}]}'
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 23:55:26 GMT
+recorded_with: VCR 2.9.3

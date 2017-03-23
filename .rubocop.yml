@@ -8,6 +8,8 @@ AllCops:
     - 'db/schema.rb'
     - 'vendor/bundle/**/*'
     - 'spec/factories/**/*'
+    - 'spec/jobs/*'
+    - 'spec/lib/*'
     - 'config/environments/*'
 
 Metrics/ClassLength:
