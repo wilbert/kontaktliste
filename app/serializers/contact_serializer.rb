@@ -6,7 +6,7 @@ class ContactSerializer < ActiveModel::Serializer
 
   attributes :id, :name, :email, :phone, :mobile, :manager_id, :gender
   attributes :postal_address, :zipcode_city, :country, :avatar
-  attributes :children
+  attributes :face_center_x, :face_center_y, :children
 
   def children
     object.children.map(&:id)
