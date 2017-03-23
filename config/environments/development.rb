@@ -46,6 +46,8 @@ Rails.application.configure do
   config.paperclip_defaults = {
     storage: :s3,
     s3_region: Rails.application.secrets.aws_s3_region,
+    region: Rails.application.secrets.aws_s3_region,
+    s3_protocol: 'https',
     bucket: Rails.application.secrets.aws_s3_bucket_name,
     url: ':rails_env/images/:class/:attachment/:id/:style/:filename',
     path: ':rails_env/images/:class/:attachment/:id/:style/:filename',
