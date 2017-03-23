@@ -41,10 +41,10 @@ general:
     - tmp/shots
 
 deployment:
-  staging:
-    branch: development
-    commands:
-      - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_KONTAKTLISTE_OPSWORKS_STAGING_ID --wait-until-deployed --skip_cleanup
+  # staging:
+  #   branch: development
+  #   commands:
+  #     - dpl --provider=opsworks --access-key-id=$AWS_ACCESS_KEY_ID --secret-access-key=$AWS_SECRET_ACCESS_KEY --app-id=$AWS_KONTAKTLISTE_OPSWORKS_STAGING_ID --wait-until-deployed --skip_cleanup
 
   production:
     branch: master
