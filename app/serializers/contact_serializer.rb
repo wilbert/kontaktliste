@@ -2,7 +2,7 @@
 class ContactSerializer < ActiveModel::Serializer
   include ActionView::Helpers::AssetUrlHelper
 
-  cache key: 'contact', expires_in: 3.hours
+  # cache key: 'contact', expires_in: 3.hours
 
   attributes :id, :name, :email, :phone, :mobile, :manager_id, :gender
   attributes :postal_address, :zipcode_city, :country, :avatar

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  apipie
+  # apipie
 
   namespace :api do
     namespace :v1 do
