@@ -2,6 +2,9 @@ module Api
   module V1
     # Contats resource actions defintion
     class ContactsController < ApplicationController
+      extend Api::V1::ApipieDocs::ContactsController
+
+      apipie_index
       def index
         params[:q] ||= {}
 

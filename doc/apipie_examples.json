@@ -1,0 +1,661 @@
+{
+  "contacts#index": [
+    {
+      "verb": "GET",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 1,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/001/thumb/avatar.png?1490298587",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Marvin Hanson",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/002/thumb/avatar.png?1490298588",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 3,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/003/thumb/avatar.png?1490298589",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+
+            ]
+          },
+          {
+            "id": 4,
+            "name": "Marvin Hanson",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/004/thumb/avatar.png?1490298589",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 5,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/005/thumb/avatar.png?1490298589",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": "",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 7,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/007/thumb/avatar.png?1490298589",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": "200",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 108,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/108/thumb/avatar.png?1490298614",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+              109
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 110,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/110/thumb/avatar.png?1490298614",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+              111
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 112,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/112/thumb/avatar.png?1490298615",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+              113
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 114,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/114/thumb/avatar.png?1490298615",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+              115
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 116,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/116/thumb/avatar.png?1490298616",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+              117
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contacts": [
+          {
+            "id": 118,
+            "name": "Mia Bradley",
+            "email": "mbradley@ecorp.org",
+            "phone": "(389)-540-3920",
+            "mobile": "(389)-541-3012",
+            "manager_id": null,
+            "gender": "female",
+            "postal_address": null,
+            "zipcode_city": " MyString",
+            "country": "MyString",
+            "avatar": "/system/contacts/avatars/000/000/118/thumb/avatar.png?1490298616",
+            "face_center_x": null,
+            "face_center_y": null,
+            "children": [
+              119
+            ]
+          }
+        ],
+        "meta": {
+          "total": 2
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "contacts#show": [
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts/120",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contact": {
+          "id": 120,
+          "name": "Mia Bradley",
+          "email": "mbradley@ecorp.org",
+          "phone": "(389)-540-3920",
+          "mobile": "(389)-541-3012",
+          "manager_id": null,
+          "gender": "female",
+          "postal_address": null,
+          "zipcode_city": " MyString",
+          "country": "MyString",
+          "avatar": "/system/contacts/avatars/000/000/120/thumb/avatar.png?1490298617",
+          "face_center_x": null,
+          "face_center_y": null,
+          "children": [
+            121
+          ]
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts/122",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contact": {
+          "id": 122,
+          "name": "Mia Bradley",
+          "email": "mbradley@ecorp.org",
+          "phone": "(389)-540-3920",
+          "mobile": "(389)-541-3012",
+          "manager_id": null,
+          "gender": "female",
+          "postal_address": null,
+          "zipcode_city": " MyString",
+          "country": "MyString",
+          "avatar": "/system/contacts/avatars/000/000/122/thumb/avatar.png?1490298617",
+          "face_center_x": null,
+          "face_center_y": null,
+          "children": [
+            123
+          ]
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts/124",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contact": {
+          "id": 124,
+          "name": "Mia Bradley",
+          "email": "mbradley@ecorp.org",
+          "phone": "(389)-540-3920",
+          "mobile": "(389)-541-3012",
+          "manager_id": null,
+          "gender": "female",
+          "postal_address": null,
+          "zipcode_city": " MyString",
+          "country": "MyString",
+          "avatar": "/system/contacts/avatars/000/000/124/thumb/avatar.png?1490298617",
+          "face_center_x": null,
+          "face_center_y": null,
+          "children": [
+            125
+          ]
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts/126",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contact": {
+          "id": 126,
+          "name": "Mia Bradley",
+          "email": "mbradley@ecorp.org",
+          "phone": "(389)-540-3920",
+          "mobile": "(389)-541-3012",
+          "manager_id": null,
+          "gender": "female",
+          "postal_address": null,
+          "zipcode_city": " MyString",
+          "country": "MyString",
+          "avatar": "/system/contacts/avatars/000/000/126/thumb/avatar.png?1490298618",
+          "face_center_x": null,
+          "face_center_y": null,
+          "children": [
+            127
+          ]
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "GET",
+      "path": "/api/v1/contacts/128",
+      "versions": [
+
+      ],
+      "query": "format=json",
+      "request_data": null,
+      "response_data": {
+        "contact": {
+          "id": 128,
+          "name": "Mia Bradley",
+          "email": "mbradley@ecorp.org",
+          "phone": "(389)-540-3920",
+          "mobile": "(389)-541-3012",
+          "manager_id": null,
+          "gender": "female",
+          "postal_address": null,
+          "zipcode_city": " MyString",
+          "country": "MyString",
+          "avatar": "/system/contacts/avatars/000/000/128/thumb/avatar.png?1490298618",
+          "face_center_x": null,
+          "face_center_y": null,
+          "children": [
+            129
+          ]
+        }
+      },
+      "code": 200,
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ],
+  "contacts#update": [
+    {
+      "verb": "PATCH",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "contact": {
+          "name": "New contact name"
+        }
+      },
+      "response_data": null,
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PATCH",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "contact": {
+          "name": "New contact name"
+        }
+      },
+      "response_data": null,
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PATCH",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "contact": {
+          "name": "New contact name"
+        }
+      },
+      "response_data": null,
+      "code": "204",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PATCH",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "contact": {
+          "first_name": ""
+        }
+      },
+      "response_data": {
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    },
+    {
+      "verb": "PATCH",
+      "path": "",
+      "versions": [
+
+      ],
+      "query": null,
+      "request_data": {
+        "contact": {
+          "first_name": ""
+        }
+      },
+      "response_data": {
+      },
+      "code": "422",
+      "show_in_doc": 1,
+      "recorded": true
+    }
+  ]
+}
