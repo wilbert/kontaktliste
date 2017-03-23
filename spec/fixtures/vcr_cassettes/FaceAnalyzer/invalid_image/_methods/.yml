@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.kairos.com/detect
+    body:
+      encoding: UTF-8
+      string: '{"url":"http://s3.amazonaws.com/kontaktliste/production/images/contacts/avatars/29/thumb/kontakliste_29.jpeg?1489887766","selector":"FULL"}'
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/json
+      app_id:
+      - 5ccbf54c
+      app_key:
+      - db71ee25756b56483dc80197795e3a23
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,app_key,app_id,api_key
+      access-control-allow-methods:
+      - GET, POST, OPTIONS
+      access-control-allow-origin:
+      - "*"
+      api-canonical:
+      - 58d3353718baf5158419
+      content-type:
+      - application/json
+      date:
+      - Thu, 23 Mar 2017 02:38:47 GMT
+      server:
+      - nginx/1.10.0 (Ubuntu)
+      content-length:
+      - '84'
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Errors":[{"Message":"no faces found in the image","ErrCode":5002}]}'
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 02:38:48 GMT
+recorded_with: VCR 2.9.3

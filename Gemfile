@@ -14,6 +14,8 @@ gem 'rack-cors',                            '0.4.1', require: 'rack/cors'
 gem 'rails',                                '~> 5.0.2'
 gem 'ransack',                              '1.8.2'
 gem 'whenever',                             '0.9.4', require: false
+# gem 'kairos-api',                           '0.0.2'
+gem 'kairos-api',                           path: '../kairos-api'
 
 group :development, :test do
   gem 'brakeman',                           '3.5.0'
@@ -32,11 +34,11 @@ end
 
 group :test do
   gem 'database_cleaner',                   '1.5.3'
+  gem 'faraday',                            '0.11.0'
   gem 'launchy',                            '2.4.3'
   gem 'rails-controller-testing',           '1.0.1'
   gem 'rspec-rails',                        '~> 3.5'
   gem 'shoulda-matchers',                   '2.8.0'
   gem 'simplecov',                          '0.9.1'
   gem 'vcr',                                '2.9.3'
-  gem 'webmock',                            '2.3.2'
 end

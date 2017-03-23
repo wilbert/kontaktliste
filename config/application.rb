@@ -41,6 +41,7 @@ module Kontaktliste
     I18n.default_locale = 'en'
 
     config.autoload_paths += %w(lib/ldap)
+    config.autoload_paths += %w(app/services)
 
     # config.action_dispatch.default_headers = {
     #   'Access-Control-Allow-Origin' => '*',
