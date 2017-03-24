@@ -4,7 +4,7 @@ ruby '2.2.4'
 
 gem 'actionpack-action_caching',            '1.2.0'
 gem 'active_model_serializers',             '0.10.5'
-gem 'apipie-rails',                         '0.4.0'
+gem 'apipie-rails',                         '0.3.5'
 gem 'aws-sdk',                              '2.8.7'
 gem 'dalli',                                '2.7.4'
 gem 'dotenv-rails',                         '2.2.0'
