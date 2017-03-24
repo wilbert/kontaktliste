@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 ENV['RAILS_ENV'] ||= 'test'
 
-if ENV['RAILS_ENV'] == 'test'
+if ENV['coverage'] == 'on'
   require 'simplecov'
 
   SimpleCov.start do

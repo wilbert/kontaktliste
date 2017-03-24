@@ -41,6 +41,8 @@ module Kontaktliste
     config.i18n.locale = 'en'
     I18n.default_locale = 'en'
 
+    config.enable_dependency_loading = true
+
     config.autoload_paths += %w(lib/ldap)
     config.autoload_paths += %w(app/services)
 
