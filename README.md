@@ -7,8 +7,8 @@ This is the kontaktliste API, based on [Rails](http://rubyonrails.org/).
 
 ### URLS
 
-* http://kontaktliste.insightsistemas.com.br - Production environment (AWS load balanced)
-* http://kontaktliste-staging.insightsistemas.com.br - Staging environment
+* http://kontaktliste.insightsistemas.com.br - Production API environment (AWS load balanced)
+* http://kontaktliste-app.insightsistemas.com.br - Production Client
 
 ## Dependencies
 
@@ -42,6 +42,10 @@ If everything goes OK, you can now run the project!
 
 `$ bundle exec whenever --set 'environment=#{railsenv}' --update-crontab` to setup automated tasks in your crontab file based on rules available in `config/schedule.rb`.
 
+#### Running SQS face analyzer queue consumer
+
+`$ bundle exec shoryuken -C config/shoryuken.yml --rails` to start polling queue with ids of contacts and process faces to set gender and face center coordinates.
+
 #### Running specs and checking coverage
 
 `$ bundle exec rake spec` to run the specs and to generate the coverage report then open the file `coverage/index.html` on your browser.
@@ -49,6 +53,13 @@ If everything goes OK, you can now run the project!
 ## Working on project
 
 Please, read this section [git-flow](https://github.com/nvie/gitflow).
+
+## Software architecture
+
+This application was built on top of Amazon Web Service, look into the image to see how it's distributed.
+
+![Cloud Architecture](https://s3.amazonaws.com/kontaktliste/kontaktliste-infra.png)
+[Click here to see Large](https://s3.amazonaws.com/kontaktliste/kontaktliste-infra.png)
 
 ### Deploys instructions
 
