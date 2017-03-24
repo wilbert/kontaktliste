@@ -30,13 +30,12 @@ test:
     - bundle exec brakeman --exit-on-warn --except ForgerySetting:
         parallel: true
   override:
-    - coverage=on bundle exec rspec spec --format progress --color:
+    - bundle exec rspec spec --format progress --color:
         parallel: true
         timeout: 1000
 
 general:
   artifacts:
-    - coverage
     - tmp/kontrast
     - tmp/shots
 
