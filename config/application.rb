@@ -43,8 +43,8 @@ module Kontaktliste
 
     config.enable_dependency_loading = true
 
-    config.autoload_paths += %w(lib/ldap)
-    config.autoload_paths += %w(app/services)
+    config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('app', 'services')
 
     config.active_job.queue_adapter = :shoryuken
     config.active_job.queue_name_prefix = Rails.env
