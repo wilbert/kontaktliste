@@ -7,6 +7,7 @@ This is the kontaktliste API, based on [Rails](http://rubyonrails.org/).
 
 ### URLS
 
+* http://kontaktliste.insightsistemas.com.br/docs - API documentation
 * http://kontaktliste.insightsistemas.com.br - Production API environment (AWS load balanced)
 * http://kontaktliste-app.insightsistemas.com.br - Production Client
 
